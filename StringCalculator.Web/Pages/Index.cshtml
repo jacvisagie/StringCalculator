@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Calculate";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to StringCalculator</h1>
+    <p>Insert a string of numbers to calculate their sum.</p>
+    <form id="spiderform" method="post" novalidate>
+        <div class="col-sm-8 offset-sm-2">
+            <div class="card card-body">
+                <div class="row">
+                    <div class="col-md-11 offset-md-1">
+                        <input asp-for="Input.Input1" />
+                    </div>
+                </div>
+                <div class="row">
+                    &nbsp;
+                </div>
+                <p>Results : @Html.DisplayFor(modelItem => Model.Input.Output1)</p>
+            </div>
+        </div>
+        <br /><br />
+        <div style="clear:both">
+
+            <p align="center"><input type="submit" value="submit" /></p>
+        </div>
+
+    </form>
+</div>
